@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white_light font-sans font-normal text-dark;
+  }
+}
+
+@layer components {
+  /* Classes for header */
+  .sticky .header-logo {
+    @apply py-5 xl:py-2;
+  }
+  .sticky .menu-scroll.active {
+    @apply opacity-70;
+  }
+  /* End classes fo header */
+}
+/*=================== SWIPER STYLES ===================*/
+.swiper-wrapper {
+  margin-bottom: 32px;
+  padding-top: 5px;
+}
+@media screen and (min-width: 768px) {
+  .swiper-wrapper {
+    margin-bottom: 48px;
+    padding-left: 5px;
+  }
+}
+
+/* ======= Feedback ========= */
+.feedback-slide {
+  background-image: url('/images/feedback/cubes.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 130px 100px;
+}
+@media screen and (min-width: 768px) {
+  .feedback-slide {
+    background-size: 185px 140px;
+  }
+}
+
+/* ======= F.A.Q. section ========== */
+.faq-section {
+  background-image: url('/images/faq/rectangle-desktop.svg'),
+    url('/images/faq/rectangle-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top 51px left calc(50% - 169px),
+    bottom -31px right calc(50% - 160px);
+  background-size: 215px auto;
+}
+@media screen and (min-width: 768px) {
+  .faq-section {
+    background-position: top -33px left calc(50% - 405px),
+      bottom -186px right calc(50% - 394px);
+    background-size: 435px auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .faq-section {
+    background-position: top -131px left calc(50% - 699px),
+      bottom -193px right calc(50% - 694px);
+    background-size: 435px auto;
+  }
+}
+
+/* ======== Partner-section =========== */
+.partner-section {
+  background-image: url('/images/partners/circle-left.svg'),
+    url('/images/partners/circle-right.svg');
+  background-repeat: no-repeat;
+  background-position: bottom -3px left calc(50% - 177px),
+    top -3px right calc(50% - 177px);
+  background-size: 250px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .partner-section {
+    background-position: bottom -3px left calc(50% - 345px),
+      top -3px left calc(50% - -360px);
+    background-size: 505px auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .partner-section {
+    background-position: bottom -2px left calc(50% - 532px),
+      top -2px right calc(50% - 594px);
+    background-size: 716px auto;
+  }
+}
+
+/* ====================================== */
+/* ============ Duties ============ */
+
+.duties-section {
+  background-image: url('/images/faq/rectangle-desktop.svg'),
+    url('/images/faq/rectangle-desktop.svg'),
+    linear-gradient(124.5deg, #00c9d6 1.37%, #2565d0 100%);
+  background-repeat: no-repeat;
+  background-position: top 51px left calc(50% - 169px),
+    bottom -31px right calc(50% - 160px), center center;
+  background-size: 215px auto, 215px auto, 100% 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .duties-section {
+    background-position: top -33px left calc(50% - 405px),
+      bottom -186px right calc(50% - 394px), center center;
+    background-size: 435px auto, 435px auto, cover;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .duties-section {
+    background-position: top -131px left calc(50% - 699px),
+      bottom -193px right calc(50% - 694px), center center;
+    background-size: 435px auto, 435px auto, cover;
+  }
+}
+.duties-item {
+  counter-increment: my-counter;
+}
+
+.duties-item::before {
+  content: counter(my-counter);
+
+  min-width: 39px;
+  height: 42px;
+  color: #2565d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 20px;
+
+  background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 2px,
+        transparent 2px
+      )
+      0% 0%/4px 4px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 2px, transparent 2px)
+      100% 0%/4px 4px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 2px, transparent 2px)
+      0% 100%/4px 4px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 2px, transparent 2px) 100%
+      100%/4px 4px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
+      calc(100% - 8px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 8px)
+      calc(100% - 4px) no-repeat,
+    linear-gradient(124.5deg, #00c9d6 1.37%, #2565d0 100%);
+  border-radius: 4px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+
+/* Classes for background Hero */
+.hero-bg {
+  background-image: url('/images/hero/bg-mob.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 544px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-bg {
+    background-image: url('/images/hero/bg.svg');
+    background-size: auto 661px;
+    background-position: top center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-bg {
+    background-size: auto 800px;
+    background-position: top -46px center;
+  }
+}
+
+/* End classes background Hero */
+/* Start class Steps */
+.steps-number::after {
+  content: '';
+  display: block;
+  width: 83px;
+  height: 53px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 79px 50px;
+}
+.steps-number:nth-child(1)::after {
+  background-image: url('/images/steps/1.svg');
+}
+.steps-number:nth-child(2)::after {
+  background-image: url('/images/steps/2.svg');
+}
+.steps-number:nth-child(3)::after {
+  background-image: url('/images/steps/3.svg');
+}
+.steps-number:nth-child(4)::after {
+  background-image: url('/images/steps/4.svg');
+}
+@media screen and (min-width: 768px) {
+  .steps-number::after {
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .steps-number:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    max-width: 384px;
+  }
+  .steps-number:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 384px;
+    margin-left: auto;
+  }
+
+  .steps-bg {
+    background-image: url('/images/steps/cube1.svg'),
+      url('/images/steps/cube2.svg');
+    background-repeat: no-repeat;
+    background-position: top 201px right calc(50% - 400px),
+      top 440px left calc(50% - 400px);
+    background-size: 156px 118px;
+  }
+  .steps-bg::after {
+    content: '';
+    display: block;
+    width: 1133px;
+    height: 106px;
+    position: absolute;
+    top: 330px;
+    left: calc(50% - 562px);
+    background-image: url('/images/steps/line.svg');
+    background-repeat: no-repeat;
+  }
+}
+/* End class Steps  */
+
+/* ======================== */
+
+/* Classes for Form */
+.custom-checkbox:focus + svg,
+.custom-checkbox:focus + span {
+  outline: 1px solid #2565d0;
+  outline-offset: 1px;
+}
+/* End classes for Form */

@@ -1,0 +1,27 @@
+{
+  "id": "header",
+  "name": "Header",
+  "btn": "Залишити заявку",
+  "menuItems": [
+    {
+      "id": "1",
+      "label": "Що потрібно",
+      "url": "description"
+    },
+    {
+      "id": "2",
+      "label": "Як проходить",
+      "url": "process"
+    },
+    {
+      "id": "3",
+      "label": "Відгуки",
+      "url": "feedback"
+    },
+    {
+      "id": "4",
+      "label": "FAQ",
+      "url": "faq"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.icon {
+  @apply absolute left-0 top-[-2px] h-[24px] w-[24px] sm:top-[2px];
+}
+
+.iconChecked {
+  @apply absolute left-[4px] top-[2px] h-[17px] w-[17px] rounded border-[1px] border-white sm:top-[6px];
+}
